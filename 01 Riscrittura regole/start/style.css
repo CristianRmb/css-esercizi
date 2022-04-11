@@ -1,4 +1,4 @@
-body {
+/* body {
     background-color: #011212;
 }
 
@@ -6,5 +6,23 @@ body {
     width: 100px;
     height: 100px;
     background-color: #ff8800;
+    border-radius: 50px;
+} */
+
+/* Riscrivi le regole utilizzando custom properties. */
+:root{
+    --coloreBG: #011212;
+    --dimensioniSTD: 100px;
+    --colorePalla: #ff8800;
+}
+
+body{
+    background-color: var(--coloreBG);
+}
+
+.ball{
+    width: var(--dimensioniSTD);
+    height: var(--dimensioniSTD);
+    background-color: var(--colorePalla);
     border-radius: 50px;
 }
