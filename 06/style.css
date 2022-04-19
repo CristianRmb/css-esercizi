@@ -5,7 +5,7 @@ body{
 #navbar{
     display: flex;
     background-color: rgb(29, 37, 69);
-    padding: 1%;
+    padding: 10px;
     column-gap: 20px;
     border-bottom: solid 2px white;
 }
@@ -47,31 +47,33 @@ body{
     color: white;
     border: solid 1px white;
     background-color: rgb(0, 255, 0);
-
 }
+
+.hamburgher{
+    display: none;
+}
+
+
 
 @media screen and (max-width: 768px) {
 
-    *{
-        visibility: hidden;
+    #navbar > *{
+        display: none;
     }
 
     #navbar {
         visibility: visible;
         display: flex;
         background-color: rgb(29, 37, 69);
-        padding: 1%;
-        column-gap: 20px;
-        border-bottom: solid 2px white;
+        justify-content: space-between;
     }
 
     #nav {
         color: white;
-        visibility: visible;
+        display: block;
     }
 
-    .hamburgher {
-        visibility: visible;
+    #navbar .hamburgher {
         display: flex;
         flex-direction: column;
         background-color: rgb(29, 37, 69);
@@ -79,7 +81,6 @@ body{
     }
     
     .item {
-        visibility: visible;
         width: 20px;
         height: 3px;
         background-color: white;
